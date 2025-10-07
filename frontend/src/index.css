@@ -1,0 +1,24 @@
+/* Add your global styles here */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: radial-gradient(ellipse at top left, #f3f7ff 0%, rgba(243,247,255,0) 60%),
+              radial-gradient(ellipse at bottom right, #fff3ef 0%, rgba(255,243,239,0) 60%),
+              #f7f9fc;
+}
+
+/* Dark mode: solid black background */
+body[data-theme="dark"],
+html[data-theme="dark"] body {
+  background: #0a0a0a !important;
+}
+
+/* subtle background pattern */
+html, body, #root {
+  height: 100%;
+}
+
