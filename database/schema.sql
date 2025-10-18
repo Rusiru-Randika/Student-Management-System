@@ -117,9 +117,9 @@ CREATE EXTENSION IF NOT EXISTS pg_trgm;
 CREATE INDEX IF NOT EXISTS idx_students_active_name ON students (is_active, name);
 CREATE INDEX IF NOT EXISTS idx_students_name_trgm ON students USING gin (name gin_trgm_ops);
 
--- Insert a sample user for testing (password: password123)
+-- Insert a sample user for testing (password: admin123)
 INSERT INTO users (username, email, password_hash) 
-VALUES ('admin', 'admin@example.com', '$2b$10$E.ExVq3.qB/2pXJm.Q/c.O.XJ/iO.XJ/iO.XJ/iO.XJ/iO.XJ/i')
+VALUES ('admin', 'admin@example.com', '$2b$10$hTyrSIXmo5Xd1RoQm4KczO9beRVSNox4uNiw8A8X4VRNqvlKLlOzC')
 ON CONFLICT (username) DO NOTHING;
 
 -- Sample students (idempotent seed)
