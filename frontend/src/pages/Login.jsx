@@ -20,8 +20,10 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
+    console.log("Submitting login for:", username);
     if (!username || !password) {
       setError("Please enter both username and password.");
+
       return;
     }
     try {
